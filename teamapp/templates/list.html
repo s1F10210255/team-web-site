@@ -11,18 +11,33 @@
     <title>ブログ</title>
   </head>
   <body>
+    {% extends 'base.html' %} 
+
+    {% block header %} 
+    <div class="jumbotron">
+      <h1 class="display-4">Hello, world!</h1>
+      <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+      <hr class="my-4">
+      <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+    </div>
+    {% endblock header %} 
+
+    {% block content %} 
     <div class="container">
-    {% for item in object_list %}
+      <a href="{% url 'create' %}" class="btn btn-primary">新しく作る</a>
+      {% for item in object_list %}
     <div class="card">
-        <h5 class="card-header">{{ item.category }}</h5>
+        <h5 class="card-header">{{ item.title }}</h5>
         <div class="card-body">
-            <h5 class="card-title">{{ item.title }}</h5>
+            <p class="card-title">{{ item.content}}</p>
+            <h5 class="card-title">{{ item.category }}</h5>
             <h6 class="card-title">{{ item.postdate }}</h6>
-            <a href="#" class ="btn btn-primary">ぼたん</a>
+            <a href="{% url 'detail' item.pk %}" class ="btn btn-primary">詳細</a>
         </div>
     </div>
     {% endfor %}
     </div>
+    {% endblock content %} 
 
 
     <!-- Optional JavaScript; choose one of the two! -->

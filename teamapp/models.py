@@ -48,7 +48,7 @@ class BlogModel(models.Model):
     postdate = models.DateTimeField(auto_now_add=True)
     published_at = models.DateTimeField(blank= True, null=True)
     like = models.IntegerField(default=0)
-    number = models.IntegerField()
+    #number = models.IntegerField()
     category = models.CharField(
         max_length=50,
         choices=CATEGORY
