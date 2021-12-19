@@ -5,6 +5,10 @@ from .models import BlogModel
 
 from django.urls import reverse_lazy
 
+def welcome_html_temprate(request):
+    return render(request,'welcome.html')
+
+
 class BlogList(ListView):
     template_name ='list.html'
     model = BlogModel
