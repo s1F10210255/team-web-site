@@ -2,9 +2,9 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.views.generic import ListView ,DetailView,CreateView,DeleteView,UpdateView
 from .models import BlogModel
-
+from django.contrib.auth.models import User
 from django.urls import reverse_lazy
-
+from django.db import IntegrityError
 def welcome_html_temprate(request):
     return render(request,'welcome.html')
 
@@ -33,3 +33,15 @@ class BlogUpdate(UpdateView):
     model= BlogModel
     fields =('title','content','category')
     success_url = reverse_lazy('list')
+
+def signupview(request):
+    if request.method =='POST':
+        username_data=request.POST['username_data']
+        password_data=request.POST['password_data']
+        try:
+            User.objects.create_user(username_data,'',password_data)
+        except IntegrityError:
+            return render(request,'signup.html',{'error':' このユーザーは既に登録されています。'})
+    else:
+        return render(request,'signup.html',{})
+    return render(request,'signup.html',{})
