@@ -1,10 +1,11 @@
-from django.shortcuts import render
+from django.shortcuts import redirect, render
 from django.http import HttpResponse
 from django.views.generic import ListView ,DetailView,CreateView,DeleteView,UpdateView
 from .models import BlogModel
 from django.contrib.auth.models import User
 from django.urls import reverse_lazy
 from django.db import IntegrityError
+from django.contrib.auth import authenticate, login
 def welcome_html_temprate(request):
     return render(request,'welcome.html')
 
@@ -45,3 +46,15 @@ def signupview(request):
     else:
         return render(request,'signup.html',{})
     return render(request,'signup.html',{})
+
+def loginview(request):
+    if request.method=='POST':
+        username_data=request.POST['username_data']
+        password_data=request.POST['password_data']
+        user = authenticate(request, username=username_data, password=password_data)
+        if user is not None:
+            login(request, user)
+            return redirect('list')
+        else:
+            return redirect('login')
+    return render(request,'login.html')
