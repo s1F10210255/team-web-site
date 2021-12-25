@@ -6,8 +6,15 @@ from django.contrib.auth.models import User
 from django.urls import reverse_lazy
 from django.db import IntegrityError
 from django.contrib.auth import authenticate, login
+
 def welcome_html_temprate(request):
     return render(request,'welcome.html')
+
+def about_us_html_temprate(request):
+    return render(request,'about_us.html')
+
+def contact_us_html_temprate(request):
+    return render(request,'contact_us.html')
 
 
 class BlogList(ListView):

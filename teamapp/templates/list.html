@@ -1,7 +1,9 @@
 <!doctype html>
-<html lang="en">
+{% extends 'base.html' %} 
+{% load static %}
+<html lang="ja">
   <head>
-    <link rel="stylesheet" type="text/css" href="teamapp\static\blog\css\sample.css">
+    <link href="{% static 'blog/css/list.css' %}" rel="stylesheet">
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,19 +14,30 @@
     <title>ブログ</title>
   </head>
   <body>
-    {% extends 'base.html' %} 
-
-    {% block header %} 
-    <div class="jumbotron">
-      <h1 class="display-4">Posta</h1>
-      <p class="lead">The greatest strength of humankind is being able to communicate</p>
-      <hr class="my-4">
-      <p></p>
-    </div>
+    {% block header %}
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="{% url 'welcome'  %}">Poste</a> <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse" type="button"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'welcome'  %}">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'about_us' %}">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'contact_us' %}">Contact us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav> 
+    <h1></h1>
     {% endblock header %} 
 
     {% block content %} 
-    <div class="container">
+    <div class="container-md">
       <a href="{% url 'create' %}" class="btn btn-primary">新しく作る</a>
       {% for item in object_list %}
     <div class="card">

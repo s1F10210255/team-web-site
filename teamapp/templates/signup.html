@@ -1,25 +1,44 @@
 {% extends 'base.html' %}
 
-{% block content %}
 
-<div class="container">
-    <form class="form-signin" method="POST">{% csrf_token %}
-        <img class="mb-4" src="/docs/4.5/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
-        <h1 class="h3 mb-3 font-weight-normal">Please sign up</h1>
-        {% if error %}
-        {{ error }}
-        {% endif %}
-        <label for="inputEmail" class="sr-only">Username</label>
-        <input type="text" id="inputEmail" class="form-control" placeholder="username" name="username_data" required autofocus>
-        <label for="inputPassword" class="sr-only">Password</label>
-        <input type="password" id="inputPassword" class="form-control" placeholder="Password" name="password_data" required>
-        <div class="checkbox mb-3">
-          <label>
-            <input type="checkbox" value="remember-me"> Remember me
-          </label>
-        </div>
-        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign up</button>
-        <p class="mt-5 mb-3 text-muted">&copy; 2017-2018</p>
-    </form>
-</div>
-{% endblock content %}
+<body>
+    {% block header %} 
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+		<div class="container">
+			<a class="navbar-brand" href="{% url 'welcome'  %}">Poste</a> <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse" type="button"><span class="navbar-toggler-icon"></span></button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+					<li class="nav-item">
+						<a class="nav-link" href="{% url 'welcome'  %}">Home</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="{% url 'about_us' %}">About</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="{% url 'contact_us' %}">Contact us</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+    {% endblock header %}
+    
+    {% block content %}
+
+    <div class="container">
+        <form class="form-signin" method="POST">{% csrf_token %}
+            <img class="mb-4" src="/docs/4.5/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
+            <h1 class="h3 mb-3 font-weight-normal">ユーザー名とパスワードを設定してください</h1>
+            {% if error %}
+            {{ error }}
+            {% endif %}
+            <label for="inputEmail" class="sr-only">ユーザー名</label>
+            <input type="text" id="inputEmail" class="form-control" placeholder="username" name="username_data" required autofocus>
+            <label for="inputPassword" class="sr-only">パスワード</label>
+            <input type="password" id="inputPassword" class="form-control" placeholder="Password" name="password_data" required>
+            <button class="btn btn-lg btn-primary btn-block" type="submit">Sign up</button>
+            <a href="{% url 'login'  %}" class="btn btn-secondary">ログインする</a>
+        </form>
+    </div>
+    {% endblock content %}
+</body>
