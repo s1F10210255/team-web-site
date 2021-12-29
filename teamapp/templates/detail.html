@@ -1,14 +1,17 @@
 <!DOCTYPE html>
+{% extends 'base.html' %} 
 <html lang="ja">
 
 <head>
-    <title>Detail</title>
+    {% block title %}
+
+    {% endblock title %}
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="teamapp\static\blog\css\sample.css">
 </head>
 
 <body>
-    {% extends 'base.html' %} 
+  
 
     {% block header %} 
     <nav class="navbar navbar-expand-lg  bg-light fixed-top navbar-dark bg-dark">
@@ -40,7 +43,6 @@
                 <p class="card-text">{{object.content}}</p>
                 <a href="{% url 'list' %}" class="btn btn-primary" >一覧へ</a>
                 <a href="{% url 'update' object.pk %}" class="btn btn-primary">編集する</a>
-                <a href="{% url 'delete' object.pk %}" class="btn btn-danger">削除する</a>
                 <a href="{% url 'delete' object.pk %}" class="btn btn-danger" onclick="alert('削除します。よろしいですか?');"  >削除する</a>
             </div>
         </div>

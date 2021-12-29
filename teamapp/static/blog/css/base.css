@@ -1,4 +1,14 @@
-
+.card{
+	padding:1em;
+	position:relative;
+}
+.box{
+	position:absolute;
+    margin-top: 100px;
+	padding:1em;
+	margin-top: 100px;
+	border:black 1px solid;	
+}
 * {
 	font-family: 'Montserrat', sans-serif;
 }
@@ -62,20 +72,4 @@
 	font-size: 18px;
 	line-height: 0.3;
 	background: #fff;
-}
-@media only screen and (max-width: 767px) {
-	.navbar-nav {
-		text-align: center;
-		background: rgba(0, 0, 0, 0.5);
-	}
-	.carousel-caption {
-		bottom: 165px;
-	}
-	.carousel-caption h5 {
-		font-size: 17px;
-	}
-	.carousel-caption a {
-		padding: 10px 15px;
-		font-size: 15px;
-	}
 }

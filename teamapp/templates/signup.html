@@ -1,4 +1,6 @@
 {% extends 'base.html' %}
+{% block title %} 
+{% endblock title %}  
 
 
 <body>
@@ -37,7 +39,7 @@
             <label for="inputPassword" class="sr-only">パスワード</label>
             <input type="password" id="inputPassword" class="form-control" placeholder="Password" name="password_data" required>
             <button class="btn btn-lg btn-primary btn-block" type="submit">Sign up</button>
-            <a href="{% url 'login'  %}" class="btn btn-secondary">ログインする</a>
+            <a href="{% url 'login_sample'  %}" class="btn btn-secondary">ログインする</a>
         </form>
     </div>
     {% endblock content %}

@@ -17,6 +17,7 @@ def contact_us_html_temprate(request):
     return render(request,'contact_us.html')
 
 
+
 class BlogList(ListView):
     template_name ='list.html'
     model = BlogModel
@@ -63,5 +64,5 @@ def loginview(request):
             login(request, user)
             return redirect('list')
         else:
-            return redirect('login')
-    return render(request,'login.html')
+            return redirect('login_sample')
+    return render(request,'login_sample.html')
