@@ -5,10 +5,11 @@ from teamapp import views as blog_views
 from django.conf import settings
 from django.conf.urls.static import static
 
+namespace='contact_form'
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('welcome.urls')),
     path('about/',include('about_us.urls')),
-    path('contact/',include('contact_us.urls')),
+    path('contact/', include('contact_form.urls')),
 ]

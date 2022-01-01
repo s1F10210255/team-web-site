@@ -1,25 +1,14 @@
 .card{
-    position: relative;
-    margin-bottom: 30px;
-    margin-left: 50px;
-}
-
-.box_main{
-	background-color: rgb(151, 139, 139);
+	padding:1em;
+	position:relative;
 }
 .box{
-    position: relative;
-    margin-bottom: 50px;
+	position:absolute;
+    margin-top: 100px;
+	padding:1em;
+	margin-top: 100px;
+	border:black 1px solid;	
 }
-
-.container-md{
-    position:absolute;
-    top: 100px;
-    margin-bottom: 30px;
-    
-}
-
-
 * {
 	font-family: 'Montserrat', sans-serif;
 }
@@ -83,8 +72,4 @@
 	font-size: 18px;
 	line-height: 0.3;
 	background: #fff;
-}
-
-.box_main{
-	background-color: rgb(151, 139, 139);
 }

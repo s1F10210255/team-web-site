@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'teamapp',
+    'contact_form',
 ]
 
 MIDDLEWARE = [
@@ -56,7 +57,7 @@ ROOT_URLCONF = 'config.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates'),],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -69,6 +70,11 @@ TEMPLATES = [
     },
 ]
 
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'django.kaihatu.test@gmail.com'
+EMAIL_HOST_PASSWORD = 'Team8Rintaro'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
 WSGI_APPLICATION = 'config.wsgi.application'
 
 
