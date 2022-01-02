@@ -1,16 +1,38 @@
 <!DOCTYPE html>
 {% load static %}
 <!--divinectorweb.com-->
-<html lang="ja">
-<head>
-	<meta charset="UTF-8">
-	<title>About us</title>
+<html style="font-size: 16px;">
+  <head>
+	<link href="{% static 'blog/css/about_us.css' %}" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&display=swap" rel="stylesheet">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" rel="stylesheet">
-	<link href="{% static 'blog/css/about_us.css' %}" rel="stylesheet">
-</head>
-<body>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="Team 8">
+    <meta name="description" content="">
+    <meta name="page_type" content="np-template-header-footer-from-plugin">
+    <title>Contact</title>
+    <link rel="stylesheet" href="nicepage.css" media="screen">
+<link rel="stylesheet" href="Contact.css" media="screen">
+    <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
+    <meta name="generator" content="Nicepage 4.2.6, nicepage.com">
+    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
+    <link id="u-page-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i">
+    
+    
+    <script type="application/ld+json">{
+		"@context": "http://schema.org",
+		"@type": "Organization",
+		"name": "",
+		"logo": "images/default-logo.png"
+}</script>
+    <meta name="theme-color" content="#478ac9">
+    <meta property="og:title" content="Contact">
+    <meta property="og:type" content="website">
+  </head>
+  <body>	<header>
 	<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
 		<div class="container">
 			<a class="navbar-brand" href="{% url 'welcome'  %}">Poste</a> <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse" type="button"><span class="navbar-toggler-icon"></span></button>
@@ -29,51 +51,55 @@
 			</div>
 		</div>
 	</nav>
-	<div class="about-section">
-		<h1>About Us Page</h1>
-		<p>Some text about who we are and what we do.</p>
-		<p>Resize the browser window to see that this page is responsive by the way.</p>
-	  </div>
-	  
-	  <h2 style="text-align:center">Our Team</h2>
-	  <div class="row">
-		<div class="column">
-		  <div class="card">
-			<img src="/w3images/team1.jpg" alt="Jane" style="width:100%">
-			<div class="container">
-			  <h2>Rintaro Watanabe</h2>
-			  <p class="title">Team 8 PM</p>
-			  <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-			  <p>s1f102102559@gmail.com</p>
-			</div>
-		  </div>
-		</div>
-	  
-		<div class="column">
-		  <div class="card">
-			<img src="/w3images/team2.jpg" alt="Mike" style="width:100%">
-			<div class="container">
-			  <h2>Mike Ross</h2>
-			  <p class="title">Art Director</p>
-			  <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-			  <p>mike@example.com</p>
-			  <p><button class="button">Contact</button></p>
-			</div>
-		  </div>
-		</div>
-	  
-		<div class="column">
-		  <div class="card">
-			<img src="/w3images/team3.jpg" alt="John" style="width:100%">
-			<div class="container">
-			  <h2>John Doe</h2>
-			  <p class="title">Designer</p>
-			  <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-			  <p>john@example.com</p>
-			  <p><button class="button">Contact</button></p>
-			</div>
-		  </div>
-		</div>
-	  </div>
-</body>
+</header>
+    <section class="u-clearfix u-section-1" id="carousel_6f39">
+      <div class="u-clearfix u-sheet u-valign-bottom-md u-valign-bottom-sm u-valign-bottom-xs u-sheet-1">
+        <div class="u-clearfix u-expanded-width u-gutter-30 u-layout-wrap u-layout-wrap-1">
+          <div class="u-gutter-0 u-layout">
+            <div class="u-layout-row">
+              <div class="u-size-60">
+                <div class="u-layout-row">
+                  <div class="u-align-left u-container-style u-layout-cell u-left-cell u-size-30 u-layout-cell-1">
+                    <div class="u-container-layout u-valign-middle u-container-layout-1">
+                      <h2 class="u-custom-font u-font-montserrat u-text u-text-palette-5-dark-1 u-text-1">Team 8</h2>
+                      <p class="u-text u-text-palette-5-light-1 u-text-2">We are INIAD students. I made this website as a practical lesson. It was impossible to create a website with sufficient functions based on the content of the lessons, so I had to look it up myself. It was a lot of fun.</p>
+                      <a href="{% url 'contact' %}" class="u-active-none u-border-2 u-border-black u-btn u-btn-rectangle u-button-style u-hover-none u-none u-text-palette-5-dark-1 u-btn-1">contact us</a>
+                    </div>
+                  </div>
+                  <div class="u-container-style u-layout-cell u-size-30">
+                    <div class="u-container-layout u-container-layout-2">
+                      <div class="u-clearfix u-expanded-width u-layout-wrap u-layout-wrap-2">
+                        <div class="u-layout">
+                          <div class="u-layout-row">
+                            <div class="u-container-style u-layout-cell u-size-20 u-layout-cell-3">
+                              <div class="u-container-layout u-container-layout-3">
+                                <h3 class="u-text u-text-default u-text-palette-1-light-2 u-text-3">Rintaro Watanabe</h3>
+                                <h4 class="u-text u-text-palette-5-dark-1 u-text-4">PM</h4>
+                              </div>
+                            </div>
+                            <div class="u-container-style u-layout-cell u-size-20 u-layout-cell-4">
+                              <div class="u-container-layout u-container-layout-4">
+                                <h3 class="u-text u-text-default u-text-palette-1-light-2 u-text-5">Sho Takizawa</h3>
+                                <h4 class="u-text u-text-palette-5-dark-1 u-text-6">Graphic designer</h4>
+                              </div>
+                            </div>
+                            <div class="u-container-style u-layout-cell u-size-20 u-layout-cell-5">
+                              <div class="u-container-layout u-container-layout-5">
+                                <h3 class="u-text u-text-default u-text-palette-1-light-2 u-text-7">Fumio Fujikawa</h3>
+                                <h4 class="u-text u-text-palette-5-dark-1 u-text-8">Art director</h4>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
 </html>
