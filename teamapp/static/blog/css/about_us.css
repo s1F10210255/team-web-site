@@ -455,7 +455,7 @@ body{
 		display: block;
 		float: none;
 		vertical-align: top; }
-		.fr-view img.fr-dib.fr-fil {
+	    .fr-view img.fr-dib.fr-fil {
 		  margin-left: 0;
 		  text-align: left; }
 		.fr-view img.fr-dib.fr-fir {
